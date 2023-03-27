@@ -11,7 +11,7 @@ const App = () => {
       <Formik
         initialValues={{
           picked: "",
-          name: ''
+          name: "",
         }}
         onSubmit={() => console.log("clicked")}
       >
@@ -23,7 +23,7 @@ const App = () => {
                 <div role="group" aria-labelledby="my-radio-group">
                   <label className="form-control form-check-label">
                     <Field
-                    className="form-check-input"
+                      className="form-check-input"
                       type="radio"
                       name="picked"
                       value={question.trueLabel}
@@ -33,7 +33,7 @@ const App = () => {
                   </label>
                   <label className="form-control form-check-label">
                     <Field
-                    className="form-check-input"
+                      className="form-check-input"
                       type="radio"
                       name="picked"
                       value="Two"
@@ -53,7 +53,7 @@ const App = () => {
                     <div>
                       <label className="form-label">{q.text}</label>
                       <Field
-                      className="form-control mb-3"
+                        className="form-control mb-3"
                         id="name"
                         name="name"
                         placeholder={q.placeholder}
@@ -64,7 +64,9 @@ const App = () => {
               )}
             </>
           )}
-          <button type="submit">Submit</button>
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
         </Form>
       </Formik>
     </div>
